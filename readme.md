@@ -1,10 +1,11 @@
-Project name: Template
-======================
+Relationship between probes and contigs 
+---------------------------------------
 
-This is a template for R script repos
+This script is written to see how closely related the contigs and
+the probe used to measure their expression is.
 
-Be sure to explain the usage of the script and the types of data it can 
-analyse and what the output will be.
+Make a list of the e values of hte probes used in Brian's microarray
+analysis.
 
 Requirements
 ------------

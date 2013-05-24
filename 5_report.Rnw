@@ -14,19 +14,24 @@
 \begin{document}
 
 <<set-options, echo=FALSE, cache=FALSE>>=
-opts_chunk$set(echo = FALSE, fig.path = 'figure/', dev = 'pdf', fig.align='center', fig.show='hold')
+opts_chunk$set(echo = FALSE, fig.path = 'figure/', dev = 'pdf', 
+               fig.align='center', fig.show='hold')
 read_chunk('1_load.R')
 @
-\setcounter{secnumdepth}{0} %this gets rid of the section numbers - add it back if you want those
-\title{Title of analysis}
+\setcounter{secnumdepth}{0} %this gets rid of the section numbers
+\title{How Brian chose his contigs}
 \author{}
 \date{\today}
 \maketitle
 
-\section{Introduction}
-Give information about this analysis and where the data comes from and what has 
-been done to it before this analysis. Mention that the code for this analysis
-is embedded in the pdf?
+\section{}
+I wanted to know what the representative probes Brian chose looked 
+like. I wanted to know how similar to the contigs they were so that I could 
+choose good probes for my mitochondrial analysis. 
+
+I used blastn to measure relatedness (version 2.2.1 of my custom subject 
+database blast script). None of his probes were perfect matches to the 
+contigs
 
 %% code that calls in the other scripts
 <<load>>=
@@ -50,10 +55,9 @@ read_chunk('3_func.R')
 read_chunk('4_do.R')
 @
 
-%% seperate out code in 4_do.R using knitr flags to call parts of the analysis for each graph/table
-\clearpage
 \section{Analysis}
-In this section go through your analysis
+Make up of the probes used as a read out for both forward and reverse 
+complement contigs. Also the number of non-contig probes.
 
 \clearpage
 \section{Session information} 

@@ -1,5 +1,6 @@
 ## @knitr load
 library(knitr)
+library(ggplot2)
 
 # read in the chosen probe-contig pairs
 probe_contig_key <- read.table("Data/array_probeset_key.txt", header = TRUE)

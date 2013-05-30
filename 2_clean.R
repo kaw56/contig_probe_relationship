@@ -20,3 +20,4 @@ other$type <- rep("other", length(other$Probe))
 # put the data frame back together
 
 probe_contig_data <- rbind(contig, rc_contig, other)
+

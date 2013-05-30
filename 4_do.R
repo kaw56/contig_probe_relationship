@@ -21,7 +21,15 @@ total_each_probe <- ddply(probe_contig_data, "Probe",
 mean(total_each_probe$Contig_num)
 
 # see if they use the same probes (somehow)
+# sort by contig and then by probe
+probe_contig_pairs <- probe_contig_data[order(probe_contig_data$Contig, probe_contig_data$Probe),]
 
+# for each contig look at the rc contig probes and compare to the forward to reverse probes
+forward_pairs <- subset(probe_contig_pairs, type == "contig")
+reverse_pairs <- subset(probe_contig_pairs, type =="rc_contig")
+
+
+    
 # mean evalue
 
 mean_evalue <- mean(probes_in_brians$evalue)
